@@ -1,0 +1,13 @@
+{% if frase %}
+    <h3>"{{frase.FraseText}}"</h3>
+    <p> -<b>{{frase.Dicho}}</b>,  {{frase.data}}</p>
+    <p>Tags</p>
+        <ul>
+        {% for tag in frase.Tag.all %}
+
+            <li>{{tag.TNom}}</li>
+        {% endfor %}
+        </ul>
+{% else %}
+    <p>No hay frases</p>
+{% endif %}

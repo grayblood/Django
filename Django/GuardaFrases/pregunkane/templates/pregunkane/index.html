@@ -1,0 +1,9 @@
+{% if ultimasfrases %}
+    <ul>
+    {% for fra in ultimasfrases %}
+        <li>{{fra.FraseText}}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay frases</p>
+{% endif %}
